@@ -2,6 +2,10 @@
 
 const main = document.querySelector("main");
 
+const buttonDiv = document.createElement("div");
+
+const displayDiv = document.createElement("div");
+
 const display = document.createElement("div");
 display.style.border = "2px solid black";
 display.style.height = "50px";
@@ -9,7 +13,7 @@ display.style.height = "50px";
 for (let i = 0; i < 10; i++) {
     const num = document.createElement("button");
     num.textContent = i;
-    main.appendChild(num);
+    buttonDiv.appendChild(num);
     num.addEventListener("click", function () {
         display.textContent += i;
     });
@@ -19,7 +23,7 @@ const operators = ["+", "-", "*", "/"];
 for (let i = 0; i < operators.length; i++) {
     const oper = document.createElement("button");
     oper.textContent = operators[i];
-    main.appendChild(oper);
+    buttonDiv.appendChild(oper);
     oper.addEventListener("click", function () {
         display.textContent += operators[i];
     });
@@ -39,7 +43,8 @@ equal.addEventListener("click", function () {
 });
 
 // Append child
-
-main.appendChild(clear);
-main.appendChild(equal);
-main.appendChild(display);
+main.appendChild(buttonDiv);
+buttonDiv.appendChild(clear);
+buttonDiv.appendChild(equal);
+main.appendChild(displayDiv);
+displayDiv.appendChild(display);
