@@ -15,7 +15,7 @@ for(let i = 0; i < 10; i++){
 };
 
 const operators = ["+", "-", "*", "/"];
-for(let i = 0; i < operators.length-1; i++){
+for(let i = 0; i < operators.length; i++){
     const oper = document.createElement("button");
     oper.textContent = operators[i];
     main.appendChild(oper);
@@ -26,12 +26,19 @@ const clear = document.createElement("button");
 clear.textContent = "C";
 clear.addEventListener("click", function () {display.textContent = "";});
 
+function safeEval(str){
+    return Function('return ' + str)()
+  }
+
 const equal = document.createElement("button");
 equal.textContent = "=";
-equal.addEventListener("click",function(){
-    display.textContent = eval(display.textContent);
-});
+// equal.addEventListener("click",function(){
+//     display.textContent = eval(display.textContent);
+// });
 
+equal.addEventListener("click", function(){
+    display.textContent=Function('return ' + display.textContent)()
+  });
 // Append child
 
 main.appendChild(clear);
