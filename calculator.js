@@ -28,6 +28,9 @@ clear.addEventListener("click", function () {display.textContent = "";});
 
 const equal = document.createElement("button");
 equal.textContent = "=";
+equal.addEventListener("click",function(){
+    display.textContent = eval(display.textContent);
+});
 
 // Append child
 
