@@ -3,12 +3,16 @@
 const main = document.querySelector("main");
 
 const buttonDiv = document.createElement("div");
+buttonDiv.className = "buttonDiv"
 
 const numDiv = document.createElement("div");
+numDiv.className = "numDiv";
 
 const operDiv = document.createElement("div");
+operDiv.className = "operDiv";
 
 const displayDiv = document.createElement("div");
+displayDiv.className = "displayDiv";
 
 const display = document.createElement("div");
 display.style.border = "2px solid black";
@@ -40,6 +44,7 @@ clear.addEventListener("click", function () {
 });
 
 const equal = document.createElement("button");
+equal.className = "equal";
 equal.textContent = "=";
 
 equal.addEventListener("click", function () {

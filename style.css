@@ -5,7 +5,30 @@ main {
     flex-direction: column-reverse;
 }
 
-/* Button div styling */
 button {
+    width: 33.33%;
+}
+
+/* Button div styling */
+.buttonDiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.numDiv {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+
+}
+
+.equal {
+  
+}
+
+
+.operDiv{
     
 }
