@@ -2,8 +2,11 @@
 
 const main = document.querySelector("main");
 
+const calculator = document.createElement("div");
+calculator.className = "calculator";
+
 const buttonDiv = document.createElement("div");
-buttonDiv.className = "buttonDiv"
+buttonDiv.className = "buttonDiv";
 
 const numDiv = document.createElement("div");
 numDiv.className = "numDiv";
@@ -14,9 +17,11 @@ operDiv.className = "operDiv";
 const displayDiv = document.createElement("div");
 displayDiv.className = "displayDiv";
 
+const histDiv = document.createElement("div");
+histDiv.className = "histDiv";
+
 const display = document.createElement("div");
-display.style.border = "2px solid black";
-display.style.height = "50px";
+display.className = "display";
 
 for (let i = 0; i < 10; i++) {
     const num = document.createElement("button");
@@ -48,18 +53,19 @@ equal.className = "equal";
 equal.textContent = "=";
 
 equal.addEventListener("click", function () {
-    display.textContent = Function('return ' + display.textContent)()
+    display.textContent = Function('return ' + display.textContent)();
 });
 
-// Append child
 
-main.appendChild(buttonDiv);
+main.appendChild(calculator);
+calculator.appendChild(buttonDiv)
 buttonDiv.appendChild(numDiv);
 buttonDiv.appendChild(operDiv);
 operDiv.appendChild(clear);
 numDiv.appendChild(equal);
-main.appendChild(displayDiv);
+calculator.appendChild(displayDiv);
 displayDiv.appendChild(display);
+displayDiv.appendChild(histDiv);
 
 // ugly js "I use no css" styling section //
 
