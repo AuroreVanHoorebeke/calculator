@@ -57,8 +57,8 @@ equal.textContent = "=";
 const dot = document.createElement("button");
 dot.className = "dot";
 dot.textContent = ".";
-dot.addEventListener("click", function () {display.textContent += dot;
-    histDiv.textContent += dot})
+dot.addEventListener("click", function () {display.textContent += dot.textContent;
+    histDiv.textContent += dot.textContent;})
 
 
 equal.addEventListener("click", function () {
