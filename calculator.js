@@ -54,6 +54,12 @@ const equal = document.createElement("button");
 equal.className = "equal";
 equal.textContent = "=";
 
+const dot = document.createElement("button");
+dot.className = "dot";
+dot.textContent = ".";
+dot.addEventListener("click", function () {display.textContent += dot;
+    histDiv.textContent += dot})
+
 
 equal.addEventListener("click", function () {
     display.textContent = Function('return ' + display.textContent)();
@@ -77,6 +83,7 @@ buttonDiv.appendChild(numDiv);
 buttonDiv.appendChild(operDiv);
 operDiv.appendChild(clear);
 numDiv.appendChild(equal);
+numDiv.appendChild(dot);
 calculator.appendChild(displayDiv);
 displayDiv.appendChild(display);
 displayDiv.appendChild(histDiv);
