@@ -29,6 +29,7 @@ for (let i = 0; i < 10; i++) {
     numDiv.appendChild(num);
     num.addEventListener("click", function () {
         display.textContent += i;
+        histDiv.textContent += i;
     });
 };
 
@@ -39,11 +40,12 @@ for (let i = 0; i < operators.length; i++) {
     operDiv.appendChild(oper);
     oper.addEventListener("click", function () {
         display.textContent += operators[i];
+        histDiv.textContent += operators[i];
     });
 }
 
 const clear = document.createElement("button");
-clear.textContent = "CE";
+clear.textContent = "AC";
 clear.addEventListener("click", function () {
     display.textContent = "";
 });
@@ -52,10 +54,22 @@ const equal = document.createElement("button");
 equal.className = "equal";
 equal.textContent = "=";
 
+
 equal.addEventListener("click", function () {
     display.textContent = Function('return ' + display.textContent)();
+    histDiv.textContent = histDiv.textContent + " = " + display.textContent + "  ";
 });
 
+
+// document.body.addEventListener("keypress", function(e){
+//     console.log(e.code)
+//     switch
+//     (e.code = enter){
+
+//     }
+// })
+
+// Append child
 
 main.appendChild(calculator);
 calculator.appendChild(buttonDiv)
