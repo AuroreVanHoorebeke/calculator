@@ -3,7 +3,7 @@
     div.calculator {
         margin-left: 33%;
         margin-right: 33%;
-        margin-top: 20%;
+        margin-top: 10%;
         width: auto;
         padding: 10px;
     }
@@ -13,7 +13,7 @@
 @media screen and (min-width: 768px) {
     div.calculator {
         margin-left: 33%;
-        margin-top: 20%;
+        margin-top: 10%;
         width: 200px;
         padding: 10px;
     }
