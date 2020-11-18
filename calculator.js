@@ -51,7 +51,7 @@ for (let i = 0; i < operators.length; i++) {
         histDiv.textContent += operators[i];
     });
 }
- // Special buttons
+// Special buttons
 const clear = document.createElement("button");
 clear.textContent = "C";
 clear.addEventListener("click", function () {
@@ -65,34 +65,33 @@ equal.textContent = "=";
 const dot = document.createElement("button");
 dot.className = "dot";
 dot.textContent = ".";
-dot.addEventListener("click", function () {display.textContent += dot.textContent;
-    histDiv.textContent += dot.textContent;})
+dot.addEventListener("click", function () {
+    display.textContent += dot.textContent;
+    histDiv.textContent += dot.textContent;
+});
 
 const signs = ["(", ")", "%"];
-for(let i = 0; i < signs.length; i++){
+for (let i = 0; i < signs.length; i++) {
     const sign = document.createElement("button");
     sign.textContent = signs[i];
     signDiv.appendChild(sign);
-    sign.addEventListener("click", function(){
+    sign.addEventListener("click", function () {
         display.textContent += signs[i];
         histDiv.textContent += signs[i];
     })
-}
 
+    function percent() {
+        let resPercent = display.textContent / 100;
+        return resPercent;
+    }
+
+}
 
 equal.addEventListener("click", function () {
     display.textContent = Function('return ' + display.textContent)();
     histDiv.textContent = histDiv.textContent + " = " + display.textContent + "  ";
+    return display.textContent;
 });
-
-
-// document.body.addEventListener("keypress", function(e){
-//     console.log(e.code)
-//     switch
-//     (e.code = enter){
-
-//     }
-// })
 
 // Append child
 
