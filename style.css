@@ -37,8 +37,6 @@ div.calculator {
     border-radius: 20px;
 }
 
-
-
 button {
     width: 30%;
     margin: 5px;
@@ -112,16 +110,16 @@ div.numDiv>button {
     margin: auto;
 }
 
-div.numDiv>button:nth-child(1){
+div.numDiv>button:nth-child(1) {
     order: -11;
 }
 
-div.numDiv>button:nth-child(11){
+div.numDiv>button:nth-child(11) {
     order: -9;
 
 }
 
-div.numDiv>button:nth-child(12){
+div.numDiv>button:nth-child(12) {
     order: -10;
 
 }
@@ -131,14 +129,13 @@ button.equal {
     background-color: #0096a5;
 }
 
-
-div.operDiv{
+div.operDiv {
     display: flex;
     flex-direction: column-reverse;
     margin: auto;
 }
 
-div.operDiv>button{
+div.operDiv>button {
     background-color: orange;
     width: 31.8px;
 }
