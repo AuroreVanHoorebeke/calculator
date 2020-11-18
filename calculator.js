@@ -8,11 +8,17 @@ calculator.className = "calculator";
 const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
+const leftButtonDiv = document.createElement("div");
+leftButtonDiv.className = "leftButtonDiv";
+
 const numDiv = document.createElement("div");
 numDiv.className = "numDiv";
 
 const operDiv = document.createElement("div");
 operDiv.className = "operDiv";
+
+const signDiv = document.createElement("div");
+signDiv.className = "signDiv";
 
 const displayDiv = document.createElement("div");
 displayDiv.className = "displayDiv";
@@ -23,6 +29,7 @@ histDiv.className = "histDiv";
 const display = document.createElement("div");
 display.className = "display";
 
+// number buttons
 for (let i = 0; i < 10; i++) {
     const num = document.createElement("button");
     num.textContent = i;
@@ -33,6 +40,7 @@ for (let i = 0; i < 10; i++) {
     });
 };
 
+// operator buttons
 const operators = ["+", "-", "*", "/"];
 for (let i = 0; i < operators.length; i++) {
     const oper = document.createElement("button");
@@ -43,7 +51,7 @@ for (let i = 0; i < operators.length; i++) {
         histDiv.textContent += operators[i];
     });
 }
-
+ // Special buttons
 const clear = document.createElement("button");
 clear.textContent = "AC";
 clear.addEventListener("click", function () {
@@ -59,6 +67,17 @@ dot.className = "dot";
 dot.textContent = ".";
 dot.addEventListener("click", function () {display.textContent += dot.textContent;
     histDiv.textContent += dot.textContent;})
+
+const signs = ["(", ")", "%"];
+for(let i = 0; i < signs.length; i++){
+    const sign = document.createElement("button");
+    sign.textContent = signs[i];
+    signDiv.appendChild(sign);
+    sign.addEventListener("click", function(){
+        display.textContent += signs[i];
+        histDiv.textContent += signs[i];
+    })
+}
 
 
 equal.addEventListener("click", function () {
@@ -79,8 +98,10 @@ equal.addEventListener("click", function () {
 
 main.appendChild(calculator);
 calculator.appendChild(buttonDiv)
-buttonDiv.appendChild(numDiv);
 buttonDiv.appendChild(operDiv);
+buttonDiv.appendChild(leftButtonDiv);
+leftButtonDiv.appendChild(numDiv);
+leftButtonDiv.appendChild(signDiv);
 operDiv.appendChild(clear);
 numDiv.appendChild(equal);
 numDiv.appendChild(dot);

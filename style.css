@@ -7,7 +7,7 @@
         width: auto;
         padding: 10px;
     }
-    
+
 }
 
 @media screen and (min-width: 768px) {
@@ -83,13 +83,22 @@ button {
 .buttonDiv {
     padding-top: 20px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
+    /* flex-wrap: wrap; */
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-content: center;
 }
 
+.leftButtonDiv {
+    display: flex;
+    flex-direction: column-reverse;
 
+}
+
+div.signDiv {
+    display: flex;
+    justify-content: space-around;
+}
 
 div.numDiv {
     display: flex;
@@ -123,9 +132,11 @@ button.equal {
 
 div.operDiv{
     display: flex;
-
+    flex-direction: column-reverse;
+    margin: auto;
 }
 
 div.operDiv>button{
     background-color: orange;
+    width: auto;
 }
