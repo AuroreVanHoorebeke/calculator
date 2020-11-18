@@ -20,6 +20,7 @@
 }
 
 /* main style */
+
 main {
     height: auto;
     width: auto;
@@ -43,6 +44,7 @@ button {
     margin: 5px;
     padding: 2px;
 }
+
 
 /* Display div */
 .displayDiv {
@@ -109,14 +111,25 @@ div.signDiv>button{
     color: whitesmoke;
 }
 
+div.signDiv>button:hover{
+    background-color: #3a3a3a;
+}
+
 div.numDiv {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row;
+    color: whitesmoke;
 }
+
+
 
 div.numDiv>button {
     margin: auto;
+}
+
+div.numDiv>button:hover{
+    background-color: #c2c2c2;
 }
 
 div.numDiv>button:nth-child(1) {
@@ -138,6 +151,10 @@ button.equal {
     background-color: #0096a5;
 }
 
+div.numDiv>button.equal:hover{
+    background-color: #006372;
+}
+
 div.operDiv {
     display: flex;
     flex-direction: column-reverse;
@@ -145,6 +162,10 @@ div.operDiv {
 }
 
 div.operDiv>button {
-    background-color: orange;
+    background-color:#ffa500;
     width: 31.8px;
+}
+
+div.operDiv>button:hover {
+    background-color: #cc7200;
 }
