@@ -53,7 +53,7 @@ for (let i = 0; i < operators.length; i++) {
 }
  // Special buttons
 const clear = document.createElement("button");
-clear.textContent = "AC";
+clear.textContent = "C";
 clear.addEventListener("click", function () {
     display.textContent = "";
 });
